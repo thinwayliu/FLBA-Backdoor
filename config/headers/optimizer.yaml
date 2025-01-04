@@ -1,0 +1,18 @@
+# optimizer info
+optimizer:
+  kwargs:
+    lr: 0.05
+    momentum: 0.9
+    weight_decay: 0.0005
+  name: SGD
+  other:
+    emb_func: 0.05
+
+# lr_scheduler info
+lr_scheduler:
+  name: MultiStepLR
+  kwargs:
+    gamma: 0.1
+    milestones:
+    - 60
+
