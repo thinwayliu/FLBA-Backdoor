@@ -8,6 +8,6 @@ from core import Trainer
 
 
 if __name__ == "__main__":
-    config = Config("./config/reproduce/Proto/ProtoNet-miniImageNet--ravi-resnet12-5-5-Table2.yaml").get_config_dict()
+    config = Config("./config/reproduce/Baseline++/BaselinePlus-tiered_imagenet-resnet12-Table2.yaml").get_config_dict()
     trainer = Trainer(config)
     trainer.train_loop()

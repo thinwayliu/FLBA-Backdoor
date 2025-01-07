@@ -17,30 +17,27 @@ pip install -r requirements.txt
 ## Dataset
 We select the [miniImageNet](https://papers.nips.cc/paper/2016/hash/90e1357833654983612fb05e3ec9148c-Abstract.html) for an example
 
-## Training
-Here, we take the Baseline model for an example:
-
-### Train a benign model
+## Training 
+Here, we take the Baseline++ model for an example (Clean Training):
 ```train
 python run_trainer.py
 ```
 
-### Train a FSL-BA model
-```train
-python run_trainer_backdoor.py
+Or we can get the clean pre-trained model from community, and we evaluate them with BadNet and FLAB
+
+### Test with downstream BadNet model
+```eval
+python run_test_clean.py
 ```
 
-## Evaluation
-We get the pre-trained model, and we evaluate them with CA and ASR.
-
-### Test model with CA
+### Test with downstream BadNet model
 ```eval
-python run_test_CA.py
+python run_test_Badnet.py
 ```
 
-### Test model with ASR
+### Test with downstream FLBA model
 ```eval
-python run_tesr_ASR.py
+python run_tesr_FLBA.py
 ```
 
 
@@ -52,13 +49,4 @@ For the pre-trained model, you can use pretrained models in results here for a b
 
 [1-shot FSL-BA models](https://drive.google.com/drive/folders/1R4rHOms0Wl81N_rfhqCYNUobYX4Eesfr?usp=sharing) trained on miniImageNet
 
-## Results
 
-The CA and ASR of benign models and FSL-BA are as follow :
-
-
-| Num of shot | 1-shot | 1-shot | 5-shot | 5-shot |
-| :---------: | :----: | :----: | :----: | :----: |
-|   Metrics   |   CA   |  ASR   |   CA   |  ASR   |
-|   Benign    |  56.5  |  43.2  |  75.7  |  26.4  |
-|    FSL-BA     |  55.7  |  86.8  |  74.2  |  90.2  |

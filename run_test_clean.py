@@ -8,7 +8,7 @@ import os
 from core.config import Config
 from core import Test
 
-PATH = "./results/CAN-miniImageNet--ravi-resnet12-5-5-Feb-25-2023-00-35-45"
+PATH = "./results/BaselinePlus-miniImageNet--ravi-resnet12-5-5-Dec-28-2022-13-18-47"
 VAR_DICT = {
     "test_epoch": 5,
     "device_ids": "0",

@@ -133,7 +133,7 @@ class Poison_Trainer(object):
             # calculate the output
             calc_begin = time()
 
-            output, acc, loss = self.model.set_forward_loss(batch)
+            output, acc, loss = self.model.set_forward_ours(batch)
 
             # compute gradients
             self.optimizer.zero_grad()

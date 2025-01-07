@@ -25,7 +25,7 @@ from core.utils import (
 )
 
 
-class Poison_Test(object):
+class Badnet_Test(object):
     """
     The tester.
 
@@ -98,7 +98,7 @@ class Poison_Test(object):
                 meter.update("data_time", time() - end)
 
                 # calculate the output
-                output, acc ,asr = self.model.set_forward_loss(batch)  # 原始的testc
+                output, acc ,asr = self.model.set_forward_badnet(batch)  # 原始的testc
 
 
                 accuracies.append(acc)
